@@ -1,8 +1,8 @@
 $colors: (
-  primary: #FFFFFF,
-  secondary: #000000,
-  secondary-lighter: lighten(#000000, 30%),
-  primary-button: #00ff38
+  primary: #FFF,
+  secondary: #000,
+  secondary-lighter: lighten(#000, 30%),
+  btn-primary: #00ff38
 );
 $fonts: (
   primary: "Fira Sans",
@@ -14,6 +14,11 @@ $fonts: (
 @function color($color-name) {
   @return map-get($colors, $color-name);
 }
+@mixin shadow($horizontal, $vertical, $blur, $intesity, $Color) {
+  -moz-box-shadow: $horizontal $vertical $blur $intesity $Color;
+  -webkit-box-shadow: $horizontal $vertical $blur $intesity $Color;
+  box-shadow: $horizontal $vertical $blur $intesity $Color;
+}
 
 * {
   margin: 0;
@@ -21,8 +26,6 @@ $fonts: (
 }
 
 body {
-  margin: 0;
-  padding: 0;
   font-family: font(primary), sans-serif;
 
   .container {
@@ -36,28 +39,27 @@ body {
   }
 }
 
-%button-shared {
+%btn-shared {
   padding: 15px 30px;
   border: none;
   border-radius: 5px;
   font-size: 16px;
 }
 
-.primary-button {
-  @extend %button-shared;
-  background: color(primary-button);
+.btn-primary {
+  @extend %btn-shared;
+  background: color(btn-primary);
   color: color(primary);
   margin: 0 20px 10px 0;
-
 }
 
-.secondary-button {
-  @extend %button-shared;
+.btn-simple {
+  @extend %btn-shared;
   background: color(primary);
   color: color(secondary);
 }
-
 // Header Section Styling
+
 header {
   background: color(primary);
   color: color(secondary);
@@ -114,11 +116,9 @@ main {
     color: color(primary);
     background: linear-gradient(135deg, #5505ff 0%,#0026ff 100%);
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-
     h1 {
       padding-bottom: 20px;
       font-size: 4rem;
-      margin: 0;
     }
 
     p {
@@ -126,13 +126,39 @@ main {
       font-size: 20px;
       margin: 0;
     }
+  }
 
-    .showcase {
-      padding: 40px 0;
+  .web-tools {
+    padding: 40px 0;
 
-      h1 {
-        margin-top: 40px;
-      }
+    h1 {
+      padding-bottom: 40px;
+      font-size: 35px;
+    }
+
+    p {
+      padding-bottom: 40px;
+      font-size: 18px;
+      color: color(secondary-lighter);
+    }
+
+    .gridbox {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    .gridbox div {
+      border-radius: 20px;
+      padding: 20px;
+      margin: 20px;
+      @include shadow(0, 0, 3px, 2px, #eee);
+    }
+
+    .gridbox img {
+      width: 50px;
+      height: auto;
     }
   }
 }
