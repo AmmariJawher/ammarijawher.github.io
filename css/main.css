@@ -17,6 +17,17 @@ body a {
   color: #FFF;
 }
 
+.paragraphy {
+  padding-bottom: 40px;
+  font-size: 18px;
+  color: #4d4d4d;
+}
+
+.title {
+  padding-bottom: 40px;
+  font-size: 35px;
+}
+
 .btn-primary, .btn-simple {
   padding: 15px 30px;
   border: none;
@@ -109,17 +120,6 @@ main .web-tools {
   padding: 40px 0;
 }
 
-main .web-tools h1 {
-  padding-bottom: 40px;
-  font-size: 35px;
-}
-
-main .web-tools p {
-  padding-bottom: 40px;
-  font-size: 18px;
-  color: #4d4d4d;
-}
-
 main .web-tools .gridbox {
   display: flex;
   flex-direction: row;
@@ -139,4 +139,26 @@ main .web-tools .gridbox div {
 main .web-tools .gridbox img {
   width: 50px;
   height: auto;
+}
+
+main .social-media ul {
+  text-align: center;
+}
+
+main .social-media li {
+  display: inline-block;
+  font-size: 40px;
+  margin: 0 10%;
+}
+
+main .social-media li:nth-child(1) {
+  color: #017cb7;
+}
+
+main .social-media li:nth-child(2) {
+  color: #00b1f4;
+}
+
+main .social-media li:nth-child(3) {
+  color: #000;
 }

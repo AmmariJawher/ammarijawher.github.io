@@ -38,6 +38,19 @@ body {
     color: color(primary);
   }
 }
+// Generic Styling
+
+.paragraphy {
+  padding-bottom: 40px;
+  font-size: 18px;
+  color: color(secondary-lighter);
+}
+
+.title {
+  padding-bottom: 40px;
+  font-size: 35px;
+}
+// Button Styling
 
 %btn-shared {
   padding: 15px 30px;
@@ -131,17 +144,6 @@ main {
   .web-tools {
     padding: 40px 0;
 
-    h1 {
-      padding-bottom: 40px;
-      font-size: 35px;
-    }
-
-    p {
-      padding-bottom: 40px;
-      font-size: 18px;
-      color: color(secondary-lighter);
-    }
-
     .gridbox {
       display: flex;
       flex-direction: row;
@@ -159,6 +161,34 @@ main {
     .gridbox img {
       width: 50px;
       height: auto;
+    }
+  }
+
+  .projects {
+    
+  }
+
+  .social-media {
+    ul {
+      text-align: center;
+    }
+
+    li {
+      display: inline-block;
+      font-size: 40px;
+      margin: 0 10%;
+    }
+
+    li:nth-child(1) {
+      color: #017cb7;
+    }
+
+    li:nth-child(2) {
+      color: #00b1f4;
+    }
+
+    li:nth-child(3) {
+      color: #000;
     }
   }
 }
