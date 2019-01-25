@@ -10,6 +10,7 @@ body {
 body .container {
   width: 90%;
   margin: auto;
+  padding: 40px 0;
 }
 
 body a {
@@ -21,11 +22,13 @@ body a {
   padding-bottom: 40px;
   font-size: 18px;
   color: #4d4d4d;
+  text-align: center;
 }
 
 .title {
   padding-bottom: 40px;
   font-size: 35px;
+  text-align: center;
 }
 
 .btn-primary, .btn-simple {
@@ -52,8 +55,7 @@ header {
 }
 
 header .mobile-menu {
-  height: 50px;
-  padding: 30px 0 0;
+  height: 15px;
 }
 
 header .mobile-menu .logo {
@@ -116,18 +118,14 @@ main .hero p {
   margin: 0;
 }
 
-main .web-tools {
-  padding: 40px 0;
-}
-
-main .web-tools .gridbox {
+main .web-tools .flexbox {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
-main .web-tools .gridbox div {
+main .web-tools .flexbox div {
   border-radius: 20px;
   padding: 20px;
   margin: 20px;
@@ -136,9 +134,61 @@ main .web-tools .gridbox div {
   box-shadow: 0 0 3px 2px #eee;
 }
 
-main .web-tools .gridbox img {
+main .web-tools .flexbox img {
   width: 50px;
   height: auto;
+}
+
+main .quote {
+  background: #f4f5f6;
+}
+
+main .quote .paragraphy {
+  padding-bottom: 10px;
+}
+
+main .quote .auther {
+  float: right;
+}
+
+main .projects .gridbox > div {
+  height: 227px;
+  width: 100%;
+  background-image: url("../img/gridbox-element-background-testing.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #FFF;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+main .projects .gridbox > div .discription {
+  height: 100px;
+  width: 100%;
+  background-image: url("../img/index.png");
+  background-repeat: repeat-x;
+  position: absolute;
+  bottom: 0;
+  padding-top: 30px;
+}
+
+main .projects .gridbox > div .discription h2 {
+  font-family: "Rubik";
+  font-weight: 400;
+  font-size: 21px;
+  margin-left: 20px;
+  margin-top: 20px;
+  padding-bottom: 10px;
+}
+
+main .projects .gridbox > div .discription p {
+  font-size: 14px;
+  margin-left: 20px;
+}
+
+main .social-media {
+  background: #f4f5f6;
 }
 
 main .social-media ul {
@@ -148,17 +198,17 @@ main .social-media ul {
 main .social-media li {
   display: inline-block;
   font-size: 40px;
-  margin: 0 10%;
+  margin: 0 20px;
 }
 
-main .social-media li:nth-child(1) {
+main .social-media .fa-linkedin-in {
   color: #017cb7;
 }
 
-main .social-media li:nth-child(2) {
+main .social-media .fa-twitter {
   color: #00b1f4;
 }
 
-main .social-media li:nth-child(3) {
+main .social-media .fa-github {
   color: #000;
 }

@@ -2,6 +2,7 @@ $colors: (
   primary: #FFF,
   secondary: #000,
   secondary-lighter: lighten(#000, 30%),
+  background-darker: #f4f5f6,
   btn-primary: #00ff38
 );
 $fonts: (
@@ -31,6 +32,7 @@ body {
   .container {
     width: 90%;
     margin: auto;
+    padding: 40px 0;
   }
 
   a {
@@ -44,11 +46,13 @@ body {
   padding-bottom: 40px;
   font-size: 18px;
   color: color(secondary-lighter);
+  text-align: center;
 }
 
 .title {
   padding-bottom: 40px;
   font-size: 35px;
+  text-align: center;
 }
 // Button Styling
 
@@ -78,8 +82,7 @@ header {
   color: color(secondary);
 
   .mobile-menu {
-    height: 50px;
-    padding: 30px 0 0;
+    height: 15px;
 
     .logo {
       font-size: 22px;
@@ -142,33 +145,79 @@ main {
   }
 
   .web-tools {
-    padding: 40px 0;
-
-    .gridbox {
+    .flexbox {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-around;
     }
 
-    .gridbox div {
+    .flexbox div {
       border-radius: 20px;
       padding: 20px;
       margin: 20px;
       @include shadow(0, 0, 3px, 2px, #eee);
     }
 
-    .gridbox img {
+    .flexbox img {
       width: 50px;
       height: auto;
     }
   }
 
+  .quote {
+    background: color(background-darker);
+
+    .paragraphy {
+      padding-bottom: 10px;
+    }
+
+    .auther {
+      float: right;
+    }
+  }
+
   .projects {
-    
+    .gridbox > div {
+      height: 227px;
+      width: 100%;
+      background-image: url("../img/gridbox-element-background-testing.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      color: color(primary);
+      position: relative;
+      margin-bottom: 20px;
+
+      .discription {
+        height: 100px;
+        width: 100%;
+        background-image: url("../img/index.png");
+        background-repeat: repeat-x;
+        position: absolute;
+        bottom: 0;
+        padding-top: 30px;
+
+        h2 {
+          font-family: font(secondary);
+          font-weight: 400;
+          font-size: 21px;
+          margin-left: 20px;
+          margin-top: 20px;
+          padding-bottom: 10px;
+        }
+
+        p {
+          font-size: 14px;
+          margin-left: 20px;
+        }
+      }
+    }
   }
 
   .social-media {
+    background: color(background-darker);
+
     ul {
       text-align: center;
     }
@@ -176,18 +225,18 @@ main {
     li {
       display: inline-block;
       font-size: 40px;
-      margin: 0 10%;
+      margin: 0 20px;
     }
 
-    li:nth-child(1) {
+    .fa-linkedin-in {
       color: #017cb7;
     }
 
-    li:nth-child(2) {
+    .fa-twitter {
       color: #00b1f4;
     }
 
-    li:nth-child(3) {
+    .fa-github {
       color: #000;
     }
   }
