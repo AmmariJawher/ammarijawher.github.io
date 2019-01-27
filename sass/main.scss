@@ -1,25 +1,7 @@
-$colors: (
-  primary: #FFF,
-  secondary: #000,
-  secondary-lighter: lighten(#000, 30%),
-  background-darker: #f4f5f6,
-  btn-primary: #00ff38
-);
-$fonts: (
-  primary: "Fira Sans",
-  secondary: "Rubik"
-);
-@function font($font-name) {
-  @return map-get($fonts, $font-name);
-}
-@function color($color-name) {
-  @return map-get($colors, $color-name);
-}
-@mixin shadow($horizontal, $vertical, $blur, $intesity, $Color) {
-  -moz-box-shadow: $horizontal $vertical $blur $intesity $Color;
-  -webkit-box-shadow: $horizontal $vertical $blur $intesity $Color;
-  box-shadow: $horizontal $vertical $blur $intesity $Color;
-}
+// Main Sass file (First-line comment)
+@import "mixins";
+@import "variables";
+@import "reset";
 
 * {
   margin: 0;
@@ -80,9 +62,14 @@ body {
 header {
   background: color(primary);
   color: color(secondary);
+  height: 50px;
+
+  .container {
+    padding: 10px 0 0;
+  }
 
   .mobile-menu {
-    height: 15px;
+    height: auto;
 
     .logo {
       font-size: 22px;
@@ -103,16 +90,19 @@ header {
 
     ul {
       list-style: none;
-      margin: 0;
-      padding: 0;
 
       li {
-        margin: 0;
+
         padding: 10px 0;
         border-top: 1px solid color(secondary-lighter);
+        @include media(786px){
+          display: inline;
+          padding: 0;
+        }
 
         a {
           padding: 10px 0;
+
         }
 
         a:hover {
@@ -129,9 +119,9 @@ main {
   .hero {
     padding: 40px 0;
     min-height: 400px;
-    color: color(primary);
-    background: linear-gradient(135deg, #5505ff 0%,#0026ff 100%);
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    // background: linear-gradient(135deg, #B9155C 0%,#01A1C5 100%);
+    @include background("../img/ocean.jpeg", center, primary, cover);
+
     h1 {
       padding-bottom: 20px;
       font-size: 4rem;
@@ -180,14 +170,10 @@ main {
   .projects {
     .gridbox > div {
       height: 227px;
-      width: 100%;
-      background-image: url("../img/gridbox-element-background-testing.png");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-      color: color(primary);
+      @include background("../img/gridbox-element-background-testing.png", center, primary, cover);
       position: relative;
       margin-bottom: 20px;
+      font-family: font(secondary);
 
       .discription {
         height: 100px;
@@ -199,12 +185,11 @@ main {
         padding-top: 30px;
 
         h2 {
-          font-family: font(secondary);
           font-weight: 400;
           font-size: 21px;
           margin-left: 20px;
-          margin-top: 20px;
-          padding-bottom: 10px;
+          margin-top: 30px;
+          padding-bottom: 5px;
         }
 
         p {
@@ -240,4 +225,59 @@ main {
       color: #000;
     }
   }
+}
+
+// Desktop Setting
+
+@media only screen and (min-width: 768px) {
+  header {
+    .mobile-menu {
+      display: none;
+    }
+    .navbar {
+      clear: both;
+      display: block;
+      text-align: center;
+      color: color(secondary);
+      padding-top: 5px;
+
+      ul {
+        list-style: none;
+        height: 30px;
+
+        li {
+          border: none;
+          display: inline;
+          margin: 0 30px;
+
+          a {
+            color: color(secondary);
+
+          }
+
+          a:hover {
+            background: color(primary);
+          }
+        }
+      }
+    }
+  }
+
+  main {
+    clear: both;
+
+    .hero {
+      min-height: 80vh;
+      @include background("../img/ocean.jpeg", center, primary, cover);
+
+      h1 {
+        margin-top: 10vh;
+      }
+
+      p {
+        width: 500px;
+      }
+    }
+  }
+
 }

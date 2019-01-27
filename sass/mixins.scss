@@ -1,0 +1,18 @@
+@mixin shadow($horizontal, $vertical, $blur, $intesity, $color) {
+  -moz-box-shadow: $horizontal $vertical $blur $intesity $color;
+  -webkit-box-shadow: $horizontal $vertical $blur $intesity $color;
+  box-shadow: $horizontal $vertical $blur $intesity $color;
+}
+@mixin background($url, $position, $color, $size) {
+  width: 100%;
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-size: $size;
+  background-position: $position;
+  color: color($color);
+}
+@mixin media($width) {
+  @media screen and (min-width:$width) {
+    @content;
+  }
+}

@@ -1,0 +1,17 @@
+$colors: (
+  primary: #FFF,
+  secondary: #000,
+  secondary-lighter: lighten(#000, 30%),
+  background-darker: #f4f5f6,
+  btn-primary: #00ff38
+);
+$fonts: (
+  primary: "Fira Sans",
+  secondary: "Rubik"
+);
+@function font($font-name) {
+  @return map-get($fonts, $font-name);
+}
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
