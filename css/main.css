@@ -36,17 +36,20 @@ body a {
   border: none;
   border-radius: 5px;
   font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 400;
 }
 
 .btn-primary {
-  background: #00ff38;
-  color: #FFF;
+  background: #FFF;
+  color: #000;
   margin: 0 20px 10px 0;
 }
 
 .btn-simple {
-  background: #FFF;
-  color: #000;
+  background: none;
+  border: 1px solid #fff;
+  color: #FFF;
 }
 
 header {
@@ -127,7 +130,6 @@ main .hero h1 {
 main .hero p {
   padding-bottom: 40px;
   font-size: 20px;
-  margin: 0;
 }
 
 main .web-tools .flexbox {

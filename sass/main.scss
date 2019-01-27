@@ -43,19 +43,21 @@ body {
   border: none;
   border-radius: 5px;
   font-size: 16px;
-}
+  text-transform: uppercase;
+font-weight: 400;}
 
 .btn-primary {
   @extend %btn-shared;
-  background: color(btn-primary);
-  color: color(primary);
+  background: color(primary);
+  color: color(secondary);
   margin: 0 20px 10px 0;
 }
 
 .btn-simple {
   @extend %btn-shared;
-  background: color(primary);
-  color: color(secondary);
+  background: none;
+  border: 1px solid #fff;
+  color: color(primary);
 }
 // Header Section Styling
 
@@ -130,7 +132,7 @@ main {
     p {
       padding-bottom: 40px;
       font-size: 20px;
-      margin: 0;
+
     }
   }
 
