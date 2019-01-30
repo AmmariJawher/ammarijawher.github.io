@@ -26,15 +26,17 @@ body {
 
 .paragraphy {
   padding-bottom: 40px;
-  font-size: 18px;
+  font-size: 16px;
   color: color(secondary-lighter);
   text-align: center;
+  line-height: 170%;
 }
 
 .title {
-  padding-bottom: 40px;
+  padding: 40px 0 15px;
   font-size: 35px;
   text-align: center;
+  color: color(secondary);
 }
 // Button Styling
 
@@ -44,7 +46,8 @@ body {
   border-radius: 5px;
   font-size: 16px;
   text-transform: uppercase;
-font-weight: 400;}
+  font-weight: 400;
+}
 
 .btn-primary {
   @extend %btn-shared;
@@ -62,7 +65,7 @@ font-weight: 400;}
 // Header Section Styling
 
 header {
-  background: color(primary);
+  background-color: color(primary);
   color: color(secondary);
   height: 50px;
 
@@ -73,7 +76,7 @@ header {
   .mobile-menu {
     height: auto;
 
-    .logo {
+    h1 {
       font-size: 22px;
       float: left;
     }
@@ -89,197 +92,187 @@ header {
     clear: both;
     text-align: center;
     display: none;
+  }
 
-    ul {
-      list-style: none;
+  ul {
+    list-style: none;
+  }
 
-      li {
+  li {
+    padding: 10px 0;
+  }
+}
 
-        padding: 10px 0;
-        border-top: 1px solid color(secondary-lighter);
-        @include media(786px){
-          display: inline;
-          padding: 0;
-        }
+.hero {
+  padding-bottom: 40px;
+  min-height: 400px;
+  @include background("../img/ocean.jpeg", center, primary, cover);
 
-        a {
-          padding: 10px 0;
+  h1 {
+    padding-bottom: 20px;
+    font-size: 4rem;
+  }
 
-        }
+  p {
+    padding-bottom: 40px;
+    font-size: 20px;
+  }
+}
 
-        a:hover {
-          background: color(secondary-lighter);
-        }
+.web-tools {
+  .flexbox {
+    text-align: center;
+
+    div {
+      display: inline-block;
+      margin: 20px 0;
+    }
+
+    img {
+      width: 70px;
+      height: auto;
+      padding-bottom: 10px;
+    }
+
+    h3 {
+      color: color(secondary);
+    }
+
+    p {
+      padding: 15px 0 0;
+    }
+  }
+}
+
+.quote {
+  background: color(background-darker);
+
+  .paragraphy {
+    padding-bottom: 10px;
+  }
+
+  .auther {
+    float: right;
+  }
+}
+
+.projects {
+  .gridbox > div {
+    height: 227px;
+    @include background("../img/gridbox-element-background-testing.png", center, primary, cover);
+    position: relative;
+    margin-bottom: 20px;
+    font-family: font(secondary);
+
+    .discription {
+      height: 100px;
+      width: 100%;
+      background-image: url("../img/index.png");
+      background-repeat: repeat-x;
+      position: absolute;
+      bottom: 0;
+      padding-top: 30px;
+
+      h2 {
+        font-weight: 400;
+        font-size: 21px;
+        margin-left: 20px;
+        margin-top: 30px;
+        padding-bottom: 5px;
+      }
+
+      p {
+        font-size: 14px;
+        margin-left: 20px;
       }
     }
   }
 }
 
-main {
-  clear: both;
+.social-media {
+  background: color(background-darker);
+
+  ul {
+    text-align: center;
+  }
+
+  li {
+    display: inline-block;
+    font-size: 40px;
+    margin: 0 20px;
+  }
+
+  .fa-linkedin-in {
+    color: #017cb7;
+  }
+
+  .fa-twitter {
+    color: #00b1f4;
+  }
+
+  .fa-github {
+    color: #000;
+  }
+}
+// Desktop Setting
+@media only screen and (min-width: 768px) {
+  header {
+    background: transparent;
+
+    .mobile-menu {
+      display: none;
+    }
+
+    .navbar {
+      clear: both;
+      display: block;
+      text-align: center;
+      padding-top: 5px;
+      float: right;
+
+      li {
+        display: inline;
+        margin: 0 30px;
+
+        a {
+          color: color(primary);
+        }
+
+        a:hover {
+          color: transparentize(color(primary), 0.5);
+          transition: 0.3s;
+        }
+      }
+    }
+  }
 
   .hero {
-    padding: 40px 0;
-    min-height: 400px;
-    // background: linear-gradient(135deg, #B9155C 0%,#01A1C5 100%);
+    min-height: 100vh;
     @include background("../img/ocean.jpeg", center, primary, cover);
 
     h1 {
-      padding-bottom: 20px;
-      font-size: 4rem;
+      margin-top: 20vh;
+      font-size: 100px;
     }
 
     p {
-      padding-bottom: 40px;
-      font-size: 20px;
-
+      width: 60%;
     }
   }
 
   .web-tools {
     .flexbox {
       display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-around;
-    }
+      text-align: left;
+      flex-flow: row;
 
-    .flexbox div {
-      border-radius: 20px;
-      padding: 20px;
-      margin: 20px;
-      @include shadow(0, 0, 3px, 2px, #eee);
-    }
-
-    .flexbox img {
-      width: 50px;
-      height: auto;
-    }
-  }
-
-  .quote {
-    background: color(background-darker);
-
-    .paragraphy {
-      padding-bottom: 10px;
-    }
-
-    .auther {
-      float: right;
-    }
-  }
-
-  .projects {
-    .gridbox > div {
-      height: 227px;
-      @include background("../img/gridbox-element-background-testing.png", center, primary, cover);
-      position: relative;
-      margin-bottom: 20px;
-      font-family: font(secondary);
-
-      .discription {
-        height: 100px;
-        width: 100%;
-        background-image: url("../img/index.png");
-        background-repeat: repeat-x;
-        position: absolute;
-        bottom: 0;
-        padding-top: 30px;
-
-        h2 {
-          font-weight: 400;
-          font-size: 21px;
-          margin-left: 20px;
-          margin-top: 30px;
-          padding-bottom: 5px;
-        }
-
-        p {
-          font-size: 14px;
-          margin-left: 20px;
-        }
-      }
-    }
-  }
-
-  .social-media {
-    background: color(background-darker);
-
-    ul {
-      text-align: center;
-    }
-
-    li {
-      display: inline-block;
-      font-size: 40px;
-      margin: 0 20px;
-    }
-
-    .fa-linkedin-in {
-      color: #017cb7;
-    }
-
-    .fa-twitter {
-      color: #00b1f4;
-    }
-
-    .fa-github {
-      color: #000;
-    }
-  }
-}
-
-// Desktop Setting
-
-@media only screen and (min-width: 768px) {
-  header {
-    .mobile-menu {
-      display: none;
-    }
-    .navbar {
-      clear: both;
-      display: block;
-      text-align: center;
-      color: color(secondary);
-      padding-top: 5px;
-
-      ul {
-        list-style: none;
-        height: 30px;
-
-        li {
-          border: none;
-          display: inline;
-          margin: 0 30px;
-
-          a {
-            color: color(secondary);
-
-          }
-
-          a:hover {
-            background: color(primary);
-          }
-        }
-      }
-    }
-  }
-
-  main {
-    clear: both;
-
-    .hero {
-      min-height: 80vh;
-      @include background("../img/ocean.jpeg", center, primary, cover);
-
-      h1 {
-        margin-top: 10vh;
+      div {
+        flex: 1;
       }
 
       p {
-        width: 500px;
+        text-align: left;
       }
     }
   }
-
 }

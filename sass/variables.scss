@@ -1,9 +1,9 @@
 $colors: (
   primary: #FFF,
-  secondary: #000,
-  secondary-lighter: lighten(#000, 30%),
+  secondary: #333,
+  secondary-lighter: lighten(#000, 40%),
   background-darker: #f4f5f6,
-  btn-primary: #00ff38
+  btn-primary: #00ff38,
 );
 $fonts: (
   primary: "Fira Sans",
