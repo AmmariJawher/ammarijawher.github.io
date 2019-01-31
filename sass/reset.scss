@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: font(primary), sans-serif;
+
+  .container {
+    width: 90%;
+    margin: auto;
+    padding: 40px 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: color(primary);
+  }
+}
+// Generic Styling
+
+.paragraphy {
+  padding-bottom: 40px;
+  font-size: 16px;
+  color: color(secondary-lighter);
+  text-align: center;
+  line-height: 170%;
+}
+
+.title {
+  padding: 40px 0 15px;
+  font-size: 35px;
+  text-align: center;
+  color: color(secondary);
+}
+// Button Styling
+
+%btn-shared {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.btn-primary {
+  @extend %btn-shared;
+  background: color(primary);
+  color: color(secondary);
+  margin: 0 20px 10px 0;
+}
+
+.btn-simple {
+  @extend %btn-shared;
+  background: none;
+  border: 1px solid #fff;
+  color: color(primary);
+}

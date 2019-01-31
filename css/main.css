@@ -95,6 +95,7 @@ header li {
 
 .hero {
   padding-bottom: 40px;
+  height: 100vh;
   min-height: 400px;
   width: 100%;
   background-image: url("../img/ocean.jpeg");
@@ -104,7 +105,8 @@ header li {
   color: #FFF;
 }
 
-.hero h1 {
+.hero h1:not(.logo) {
+  margin-top: 20vh;
   padding-bottom: 20px;
   font-size: 4rem;
 }
@@ -146,34 +148,21 @@ header li {
 }
 
 .skills p {
-  padding-bottom: 0px;
+  padding-bottom: 0;
 }
 
 .skills div {
-  width: 50%;
-  height: 600px;
-  float: left;
+  height: 550px;
 }
 
 .skills .side-img {
-  width: 100%;
-  background-image: url("../img/background-side-img.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  color: #FFF;
-  width: 50%;
+  display: none;
 }
 
 .skills .skills-info {
   background-color: black;
   margin: auto;
-}
-
-.skills .skills-info .container {
-  float: none;
   text-align: center;
-  width: 80%;
 }
 
 .skills .skills-info .skill-bar {
@@ -189,10 +178,10 @@ header li {
 }
 
 .skills .skills-info .skill-title {
-  float: left;
+  text-align: left;
   color: #FFF;
   font-weight: 400;
-  margin: 10% 0 1% 0;
+  margin: 40px 0 5px;
 }
 
 .projects .gridbox > div {
@@ -277,6 +266,7 @@ header li {
   }
   header .navbar li a {
     color: #FFF;
+    transition: 0.3s;
   }
   header .navbar li a:hover {
     color: rgba(255, 255, 255, 0.5);
@@ -308,5 +298,30 @@ header li {
   }
   .web-tools .flexbox p {
     text-align: left;
+  }
+  .skills div {
+    width: 50%;
+    height: 600px;
+    float: left;
+  }
+  .skills .side-img {
+    width: 100%;
+    background-image: url("../img/background-side-img.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #FFF;
+    width: 50%;
+    display: block;
+  }
+  .skills .skills-info .container {
+    float: none;
+    width: 80%;
+  }
+  .skills .skills-info .skill-title {
+    text-align: left;
+    color: #FFF;
+    font-weight: 400;
+    margin: 60px 0 5px;
   }
 }

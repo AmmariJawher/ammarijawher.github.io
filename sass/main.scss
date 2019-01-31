@@ -1,68 +1,7 @@
 // Main Sass file (First-line comment)
 @import "mixins";
 @import "variables";
-@import "reset";
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: font(primary), sans-serif;
-
-  .container {
-    width: 90%;
-    margin: auto;
-    padding: 40px 0;
-  }
-
-  a {
-    text-decoration: none;
-    color: color(primary);
-  }
-}
-// Generic Styling
-
-.paragraphy {
-  padding-bottom: 40px;
-  font-size: 16px;
-  color: color(secondary-lighter);
-  text-align: center;
-  line-height: 170%;
-}
-
-.title {
-  padding: 40px 0 15px;
-  font-size: 35px;
-  text-align: center;
-  color: color(secondary);
-}
-// Button Styling
-
-%btn-shared {
-  padding: 15px 30px;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  text-transform: uppercase;
-  font-weight: 400;
-}
-
-.btn-primary {
-  @extend %btn-shared;
-  background: color(primary);
-  color: color(secondary);
-  margin: 0 20px 10px 0;
-}
-
-.btn-simple {
-  @extend %btn-shared;
-  background: none;
-  border: 1px solid #fff;
-  color: color(primary);
-}
-// Header Section Styling
+@import "reset"; // Header Section Styling
 
 header {
   background-color: color(primary);
@@ -105,10 +44,12 @@ header {
 
 .hero {
   padding-bottom: 40px;
+  height: 100vh;
   min-height: 400px;
   @include background("../img/ocean.jpeg", center, primary, cover);
 
-  h1 {
+  h1:not(.logo) {
+    margin-top: 20vh;
     padding-bottom: 20px;
     font-size: 4rem;
   }
@@ -149,57 +90,47 @@ header {
 
   h1 {
     color: color(primary);
-
   }
 
   p {
-    padding-bottom: 0px;
+    padding-bottom: 0;
   }
 
   div {
-    width: 50%;
-    height: 600px;
-    float: left;
+    height: 550px;
   }
 
   .side-img {
-    @include background("../img/background-side-img.jpg", center, primary, cover);
-    width: 50%;
+    display: none;
   }
 
   .skills-info {
     background-color: black;
     margin: auto;
+    text-align: center;
+    // TODO: rewrite the skill bar CSS code to work using SASS mixin
+    .skill-bar {
+      width: 100%;
+      background-color: color(secondary-lighter);
+      height: 3px;
 
-    .container {
-      float: none;
-      text-align: center;
-      width: 80%;
-      }
-
-      .skill-bar {
-        width: 100%;
-        background-color: color(secondary-lighter);
-        height: 3px;
-
-        div {
-          width: 70%;
-          background-color: color(primary);
-          height: 100%;
-        }
-      }
-
-      .skill-title {
-        float: left;
-        color: color(primary);
-        font-weight: 400;
-        margin: 10% 0 1% 0;
+      div {
+        width: 70%;
+        background-color: color(primary);
+        height: 100%;
       }
     }
+
+    .skill-title {
+      text-align: left;
+      color: color(primary);
+      font-weight: 400;
+      margin: 40px 0 5px;
+    }
   }
+}
 
 .projects {
-
   .gridbox > div {
     height: 227px;
     @include background("../img/gridbox-element-background-testing.png", center, primary, cover);
@@ -279,6 +210,7 @@ header {
 
         a {
           color: color(primary);
+          transition: 0.3s;
         }
 
         a:hover {
@@ -315,6 +247,34 @@ header {
 
       p {
         text-align: left;
+      }
+    }
+  }
+
+  .skills {
+    div {
+      width: 50%;
+      height: 600px;
+      float: left;
+    }
+
+    .side-img {
+      @include background("../img/background-side-img.jpg", center, primary, cover);
+      width: 50%;
+      display: block;
+    }
+
+    .skills-info {
+      .container {
+        float: none;
+        width: 80%;
+      }
+
+      .skill-title {
+        text-align: left;
+        color: color(primary);
+        font-weight: 400;
+        margin: 60px 0 5px;
       }
     }
   }
