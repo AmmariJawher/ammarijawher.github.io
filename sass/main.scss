@@ -278,4 +278,26 @@ header {
       }
     }
   }
+
+  .projects {
+    clear: both;
+
+    .gridbox {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 3px;
+      grid-auto-rows: minmax(227px, auto);
+      margin-bottom: 30px;
+    }
+
+    .gridbox > div {
+      margin-bottom: 0px;
+      height: auto;
+    }
+
+    .element1 {
+      grid-column: 1/3;
+      grid-row: 1/3;
+    }
+  }
 }
