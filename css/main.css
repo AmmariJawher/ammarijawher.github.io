@@ -137,16 +137,62 @@ header li {
   padding: 15px 0 0;
 }
 
-.quote {
-  background: #f4f5f6;
+.skills {
+  padding: 40px 0;
 }
 
-.quote .paragraphy {
-  padding-bottom: 10px;
+.skills h1 {
+  color: #FFF;
 }
 
-.quote .auther {
-  float: right;
+.skills p {
+  padding-bottom: 0px;
+}
+
+.skills div {
+  width: 50%;
+  height: 600px;
+  float: left;
+}
+
+.skills .side-img {
+  width: 100%;
+  background-image: url("../img/background-side-img.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #FFF;
+  width: 50%;
+}
+
+.skills .skills-info {
+  background-color: black;
+  margin: auto;
+}
+
+.skills .skills-info .container {
+  float: none;
+  text-align: center;
+  width: 80%;
+}
+
+.skills .skills-info .skill-bar {
+  width: 100%;
+  background-color: #666666;
+  height: 3px;
+}
+
+.skills .skills-info .skill-bar div {
+  width: 70%;
+  background-color: #FFF;
+  height: 100%;
+}
+
+.skills .skills-info .skill-title {
+  float: left;
+  color: #FFF;
+  font-weight: 400;
+  margin: 10% 0 1% 0;
 }
 
 .projects .gridbox > div {

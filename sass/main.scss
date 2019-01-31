@@ -144,19 +144,62 @@ header {
   }
 }
 
-.quote {
-  background: color(background-darker);
+.skills {
+  padding: 40px 0;
 
-  .paragraphy {
-    padding-bottom: 10px;
+  h1 {
+    color: color(primary);
+
   }
 
-  .auther {
-    float: right;
+  p {
+    padding-bottom: 0px;
   }
-}
+
+  div {
+    width: 50%;
+    height: 600px;
+    float: left;
+  }
+
+  .side-img {
+    @include background("../img/background-side-img.jpg", center, primary, cover);
+    width: 50%;
+  }
+
+  .skills-info {
+    background-color: black;
+    margin: auto;
+
+    .container {
+      float: none;
+      text-align: center;
+      width: 80%;
+      }
+
+      .skill-bar {
+        width: 100%;
+        background-color: color(secondary-lighter);
+        height: 3px;
+
+        div {
+          width: 70%;
+          background-color: color(primary);
+          height: 100%;
+        }
+      }
+
+      .skill-title {
+        float: left;
+        color: color(primary);
+        font-weight: 400;
+        margin: 10% 0 1% 0;
+      }
+    }
+  }
 
 .projects {
+
   .gridbox > div {
     height: 227px;
     @include background("../img/gridbox-element-background-testing.png", center, primary, cover);
