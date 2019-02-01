@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -21,7 +25,7 @@ body a {
 .paragraphy {
   padding-bottom: 40px;
   font-size: 16px;
-  color: #666666;
+  color: gray;
   text-align: center;
   line-height: 170%;
 }
@@ -30,7 +34,7 @@ body a {
   padding: 40px 0 15px;
   font-size: 35px;
   text-align: center;
-  color: #333;
+  color: #000;
 }
 
 .btn-primary, .btn-simple {
@@ -44,7 +48,7 @@ body a {
 
 .btn-primary {
   background: #FFF;
-  color: #333;
+  color: #000;
   margin: 0 20px 10px 0;
 }
 
@@ -56,7 +60,7 @@ body a {
 
 header {
   background-color: #FFF;
-  color: #333;
+  color: #000;
   height: 50px;
 }
 
@@ -76,7 +80,7 @@ header .mobile-menu h1 {
 header .mobile-menu a {
   float: right;
   font-size: 25px;
-  color: #333;
+  color: #000;
 }
 
 header .navbar {
@@ -95,8 +99,7 @@ header li {
 
 .hero {
   padding-bottom: 40px;
-  height: 100vh;
-  min-height: 400px;
+  height: 500px;
   width: 100%;
   background-image: url("../img/ocean.jpeg");
   background-repeat: no-repeat;
@@ -125,14 +128,13 @@ header li {
   margin: 20px 0;
 }
 
-.web-tools .flexbox img {
-  width: 70px;
-  height: auto;
+.web-tools .flexbox i {
+  font-size: 50px;
   padding-bottom: 10px;
 }
 
 .web-tools .flexbox h3 {
-  color: #333;
+  color: #000;
 }
 
 .web-tools .flexbox p {
@@ -167,7 +169,7 @@ header li {
 
 .skills .skills-info .skill-bar {
   width: 100%;
-  background-color: #666666;
+  background-color: gray;
   height: 3px;
 }
 
@@ -184,7 +186,7 @@ header li {
   margin: 40px 0 5px;
 }
 
-.projects .gridbox > div {
+#projects .gridbox > div {
   height: 227px;
   width: 100%;
   background-image: url("../img/gridbox-element-background-testing.png");
@@ -197,7 +199,7 @@ header li {
   font-family: "Rubik";
 }
 
-.projects .gridbox > div .discription {
+#projects .gridbox > div .discription {
   height: 100px;
   width: 100%;
   background-image: url("../img/index.png");
@@ -207,7 +209,7 @@ header li {
   padding-top: 30px;
 }
 
-.projects .gridbox > div .discription h2 {
+#projects .gridbox > div .discription h2 {
   font-weight: 400;
   font-size: 21px;
   margin-left: 20px;
@@ -215,13 +217,17 @@ header li {
   padding-bottom: 5px;
 }
 
-.projects .gridbox > div .discription p {
+#projects .gridbox > div .discription p {
   font-size: 14px;
   margin-left: 20px;
 }
 
 .social-media {
-  background: #f4f5f6;
+  background: #000;
+}
+
+.social-media .title {
+  color: #FFF;
 }
 
 .social-media ul {
@@ -232,18 +238,20 @@ header li {
   display: inline-block;
   font-size: 40px;
   margin: 0 20px;
+  color: #FFF;
+  transition: 0.3s;
 }
 
-.social-media .fa-linkedin-in {
-  color: #017cb7;
+.social-media li:hover {
+  opacity: 0.5;
+  transition: 0.3s;
 }
 
-.social-media .fa-twitter {
-  color: #00b1f4;
-}
-
-.social-media .fa-github {
-  color: #000;
+footer {
+  background-color: #000;
+  padding: 10px 0;
+  color: gray;
+  text-align: center;
 }
 
 @media only screen and (min-width: 768px) {
@@ -259,6 +267,9 @@ header li {
     text-align: center;
     padding-top: 5px;
     float: right;
+    position: fixed;
+    right: 5%;
+    z-index: 1;
   }
   header .navbar li {
     display: inline;
@@ -292,9 +303,11 @@ header li {
     display: flex;
     text-align: left;
     flex-flow: row;
+    justify-content: space-between;
   }
   .web-tools .flexbox div {
     flex: 1;
+    padding: 10px;
   }
   .web-tools .flexbox p {
     text-align: left;
@@ -324,21 +337,21 @@ header li {
     font-weight: 400;
     margin: 60px 0 5px;
   }
-  .projects {
+  #projects {
     clear: both;
   }
-  .projects .gridbox {
+  #projects .gridbox {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 3px;
     grid-auto-rows: minmax(227px, auto);
     margin-bottom: 30px;
   }
-  .projects .gridbox > div {
-    margin-bottom: 0px;
+  #projects .gridbox > div {
+    margin-bottom: 0;
     height: auto;
   }
-  .projects .element1 {
+  #projects .element1 {
     grid-column: 1/3;
     grid-row: 1/3;
   }
