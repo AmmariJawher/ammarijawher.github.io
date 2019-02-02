@@ -37,27 +37,19 @@ body a {
   color: #000;
 }
 
-.btn-leader, .btn-simple {
-  cursor: pointer;
+.btn-primary, .btn-simple {
   padding: 15px 30px;
   border: none;
-  border-radius: 100px;
+  border-radius: 5px;
   font-size: 16px;
-  text-transform: capitalize;
+  text-transform: uppercase;
   font-weight: 400;
-  transition: 0.3s;
-  text-align: center;
-  margin-left: 20px;
 }
 
-.btn-leader {
-  color: #FFF !important;
-  background: #007bff;
-}
-
-.btn-leader:hover {
-  color: #FFF !important;
-  background: #0065d1;
+.btn-primary {
+  background: #FFF;
+  color: #000;
+  margin: 0 20px 10px 0;
 }
 
 .btn-simple {
@@ -66,14 +58,43 @@ body a {
   color: #FFF;
 }
 
-.btn-simple:hover {
-  background: #FFF;
-  border: 1px solid #fff;
+header {
+  background-color: #FFF;
+  color: #000;
+  height: 50px;
+}
+
+header .container {
+  padding: 10px 0 0;
+}
+
+header .mobile-menu {
+  height: auto;
+}
+
+header .mobile-menu h1 {
+  font-size: 22px;
+  float: left;
+}
+
+header .mobile-menu a {
+  float: right;
+  font-size: 25px;
   color: #000;
 }
 
-.navbar-sticky {
-  position: sticky;
+header .navbar {
+  clear: both;
+  text-align: center;
+  display: none;
+}
+
+header ul {
+  list-style: none;
+}
+
+header li {
+  padding: 10px 0;
 }
 
 .hero {
@@ -141,7 +162,7 @@ body a {
 }
 
 .skills .skills-info {
-  background-color: #000;
+  background-color: black;
   margin: auto;
   text-align: center;
 }
@@ -234,12 +255,36 @@ footer {
 }
 
 @media only screen and (min-width: 768px) {
-  .navbar-nav {
-    position: absolute;
+  header {
+    background: transparent;
+  }
+  header .mobile-menu {
+    display: none;
+  }
+  header .navbar {
+    clear: both;
+    display: block;
+    text-align: center;
+    padding-top: 5px;
+    float: right;
+    position: fixed;
     right: 5%;
+    z-index: 1;
+  }
+  header .navbar li {
+    display: inline;
+    margin: 0 30px;
+  }
+  header .navbar li a {
+    color: #FFF;
+    transition: 0.3s;
+  }
+  header .navbar li a:hover {
+    color: rgba(255, 255, 255, 0.5);
+    transition: 0.3s;
   }
   .hero {
-    min-height: 750px;
+    min-height: 100vh;
     width: 100%;
     background-image: url("../img/ocean.jpeg");
     background-repeat: no-repeat;
