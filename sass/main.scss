@@ -1,8 +1,9 @@
 // Main Sass file (First-line comment)
 @import "mixins";
 @import "variables";
-@import "reset"; // Header Section Styling
+@import "reset";
 
+// Header Section Styling
 header {
   background-color: color(primary);
   color: color(secondary);
@@ -71,6 +72,7 @@ header {
     i {
       font-size: 50px;
       padding-bottom: 10px;
+      color: color(btn-primary);
     }
 
     h3 {
@@ -195,33 +197,45 @@ footer {
 // Desktop Setting
 @media only screen and (min-width: 768px) {
   header {
-    background: transparent;
+    background: color(primary);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
 
+    // TODO: Fix the Header
     .mobile-menu {
       display: none;
     }
 
-    .navbar {
-      clear: both;
-      display: block;
-      text-align: center;
+    .logo {
+      display: inline;
+      float: left;
+      font-size: 18px;
+      font-weight: 400;
       padding-top: 5px;
-      float: right;
-      position: fixed;
-      right: 5%;
-      z-index: 1;
+    }
+
+    .navbar {
+      display: inline;
+
+      .navmenu {
+        padding-top: 5px;
+        align-self: right;
+        float: right;
+      }
 
       li {
         display: inline;
         margin: 0 30px;
 
         a {
-          color: color(primary);
+          color: color(secondary);
           transition: 0.3s;
         }
 
         a:hover {
-          color: transparentize(color(primary), 0.5);
+          color: color(secondary-lighter);
           transition: 0.3s;
         }
       }
@@ -229,7 +243,7 @@ footer {
   }
 
   .hero {
-    min-height: 100vh;
+    min-height: 700px;
     @include background("../img/ocean.jpeg", center, primary, cover);
 
     h1 {

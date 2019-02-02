@@ -37,25 +37,46 @@ body a {
   color: #000;
 }
 
-.btn-primary, .btn-simple {
-  padding: 15px 30px;
+.btn-primary, .btn-primary-min, .btn-simple {
   border: none;
   border-radius: 5px;
   font-size: 16px;
-  text-transform: uppercase;
-  font-weight: 400;
-}
-
-.btn-primary {
-  background: #FFF;
-  color: #000;
+  text-transform: capitalize;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 100px;
+  padding: 15px 30px;
   margin: 0 20px 10px 0;
 }
 
-.btn-simple {
-  background: none;
-  border: 1px solid #fff;
+.btn-primary {
+  background: #00e833;
   color: #FFF;
+}
+
+.btn-primary:hover {
+  background: #1cff4e;
+}
+
+.btn-primary-min {
+  background: #00e833;
+  color: #FFF !important;
+  padding: 10px 20px;
+  margin: 0;
+}
+
+.btn-primary-min:hover {
+  background: #1cff4e;
+}
+
+.btn-simple {
+  background: #FFF;
+  color: #000;
+}
+
+.btn-simple:hover {
+  background: #FFF;
+  color: #000;
 }
 
 header {
@@ -131,6 +152,7 @@ header li {
 .web-tools .flexbox i {
   font-size: 50px;
   padding-bottom: 10px;
+  color: #00e833;
 }
 
 .web-tools .flexbox h3 {
@@ -256,35 +278,44 @@ footer {
 
 @media only screen and (min-width: 768px) {
   header {
-    background: transparent;
+    background: #FFF;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
   }
   header .mobile-menu {
     display: none;
   }
-  header .navbar {
-    clear: both;
-    display: block;
-    text-align: center;
+  header .logo {
+    display: inline;
+    float: left;
+    font-size: 18px;
+    font-weight: 400;
     padding-top: 5px;
+  }
+  header .navbar {
+    display: inline;
+  }
+  header .navbar .navmenu {
+    padding-top: 5px;
+    align-self: right;
     float: right;
-    position: fixed;
-    right: 5%;
-    z-index: 1;
   }
   header .navbar li {
     display: inline;
     margin: 0 30px;
   }
   header .navbar li a {
-    color: #FFF;
+    color: #000;
     transition: 0.3s;
   }
   header .navbar li a:hover {
-    color: rgba(255, 255, 255, 0.5);
+    color: gray;
     transition: 0.3s;
   }
   .hero {
-    min-height: 100vh;
+    min-height: 700px;
     width: 100%;
     background-image: url("../img/ocean.jpeg");
     background-repeat: no-repeat;
