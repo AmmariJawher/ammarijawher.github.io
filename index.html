@@ -9,36 +9,41 @@
   <!-- CSS links -->
   <link rel="stylesheet" href="css/main.css">
 
-  <!-- Google and Awesome Fonts -->
+  <!-- CSS Libraries: bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+  <!-- Google Font and Awesome Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400|Rubik:400" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+  <!-- Loading the Scirpt -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+
 
   <title>Jawher Ammari</title>
 </head>
 
 <body>
-  <section class="hero">
-    <header>
-      <div class="container">
-        <div class="mobile-menu">
-          <h1 class="logo">Jawher Ammari</h1>
-          <a class="menu-icon" href="#"><i class="fas fa-bars"></i></a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">JAWHER AMMARI</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="#">About</a>
+          <a class="nav-item nav-link" href="#projects">Projects</a>
+          <a class="nav-item nav-link btn-leader" href="#">Contact</a>
         </div>
-        <nav class="navbar">
-          <ul class="">
-            <li><a href="">Home</a></li>
-            <li><a href="">Projects</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Contact</a></li>
-          </ul>
-        </nav>
       </div>
-    </header>
+    </nav>
+  <section class="hero">
     <div class="container">
       <h1>Hi there!</h1>
       <p>And welcome to my website, my name is Jawher Ammari. I am a self thought front-end web developer. I build themes and work on projects form time to time.</p>
-      <button class="btn-primary" type="button" name="button">view protfolio</button>
-      <button class="btn-simple" type="button" name="button">cheack my cv</button>
+      <button class="btn-leader" type="button" name="button">View Protfolio</button>
+      <button class="btn-simple" type="button" name="button">Cheack My CV</button>
     </div>
   </section>
 
@@ -49,17 +54,17 @@
 
       <div class="flexbox">
         <div>
-          <img src="img/tools/sass.png" alt="">
-          <h3>Front-end Developer</h3>
-          <p class="paragraphy">From image sliders to custom content elements and contact forms, Incubator theme is guaranteed to display properly on all major devices.</p>
+          <i class="fas fa-check"></i>
+          <h3>FRONT-END DEVELOPMENT</h3>
+          <p class="paragraphy">Organized and semantic HTML and CSS bring your designs to life. I prefer coding from scratch instead of a framework, with no obfuscations to ensure there’s no junk code or bugs.</p>
         </div>
         <div>
-          <img src="img/tools/sass.png" alt="">
-          <h3>Front-end Developer</h3>
-          <p class="paragraphy">From image sliders to custom content elements and contact forms, Incubator theme is guaranteed to display properly on all major devices.</p>
+          <i class="fas fa-mobile-alt"></i>
+          <h3>RESPONSIVE DESIGN</h3>
+          <p class="paragraphy">No need to worry about what your website looks across devices, I specialize in bringing full desktop sites down to the smallest mobile size, and everything in between.</p>
         </div>
         <div>
-          <img src="img/tools/sass.png" alt="">
+          <i class="fas fa-check"></i>
           <h3>Front-end Developer</h3>
           <p class="paragraphy">From image sliders to custom content elements and contact forms, Incubator theme is guaranteed to display properly on all major devices.</p>
         </div>
@@ -90,7 +95,7 @@
     </div>
   </section>
 
-  <section class="projects">
+  <section id="projects">
     <div class="container">
       <h1 class="title">My Projects</h1>
       <p class="paragraphy">i believe that building a from the start to finish is a good way to mesure someone motivation and code quality.</p>
@@ -120,15 +125,15 @@
     <div class="container">
       <h1 class="title">Follow me on Socila Media</h1>
       <ul>
-        <li><a class="fab fa-linkedin-in" href="#"></a></li>
-        <li><a class="fab fa-twitter" href="#"></a></li>
-        <li><a class="fab fa-github" href="#"></a></li>
+        <li><a class="fab fa-linkedin-in" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/jawherammari/"></a></li>
+        <li><a class="fab fa-twitter" target="_blank" rel="noopener noreferrer" href="https://twitter.com/AmmariJawher"></a></li>
+        <li><a class="fab fa-github" target="_blank" rel="noopener noreferrer" href="https://github.com/AmmariJawher"></a></li>
       </ul>
       <div>
   </section>
 
   <footer>
-
+    <p> Copyright &copy; Jawher AMMARI. All rights reserved.</p>
   </footer>
 </body>
 

@@ -1,45 +1,12 @@
 // Main Sass file (First-line comment)
 @import "mixins";
 @import "variables";
-@import "reset"; // Header Section Styling
+@import "reset";
 
-header {
-  background-color: color(primary);
-  color: color(secondary);
-  height: 50px;
 
-  .container {
-    padding: 10px 0 0;
-  }
-
-  .mobile-menu {
-    height: auto;
-
-    h1 {
-      font-size: 22px;
-      float: left;
-    }
-
-    a {
-      float: right;
-      font-size: 25px;
-      color: color(secondary);
-    }
-  }
-
-  .navbar {
-    clear: both;
-    text-align: center;
-    display: none;
-  }
-
-  ul {
-    list-style: none;
-  }
-
-  li {
-    padding: 10px 0;
-  }
+// Header Section Styling
+.navbar-sticky {
+  position: sticky;
 }
 
 .hero {
@@ -103,7 +70,7 @@ header {
   }
 
   .skills-info {
-    background-color: black;
+    background-color: color(secondary);
     margin: auto;
     text-align: center;
     // TODO: rewrite the skill bar CSS code to work using SASS mixin
@@ -194,42 +161,13 @@ footer {
 }
 // Desktop Setting
 @media only screen and (min-width: 768px) {
-  header {
-    background: transparent;
-
-    .mobile-menu {
-      display: none;
-    }
-
-    .navbar {
-      clear: both;
-      display: block;
-      text-align: center;
-      padding-top: 5px;
-      float: right;
-      position: fixed;
-      right: 5%;
-      z-index: 1;
-
-      li {
-        display: inline;
-        margin: 0 30px;
-
-        a {
-          color: color(primary);
-          transition: 0.3s;
-        }
-
-        a:hover {
-          color: transparentize(color(primary), 0.5);
-          transition: 0.3s;
-        }
-      }
-    }
+  .navbar-nav {
+    position: absolute;
+    right: 5%;
   }
 
   .hero {
-    min-height: 100vh;
+    min-height: 750px;
     @include background("../img/ocean.jpeg", center, primary, cover);
 
     h1 {
