@@ -16,3 +16,18 @@
     @content;
   }
 }
+
+
+@mixin progress-bar($color) {
+  width: 100%;
+  background-color: $color;
+  height: 5px;
+  border-radius: 100px;
+}
+
+@mixin progress($width, $color) {
+  border-radius: 100px;
+  width: $width;
+  background-color: $color;
+  height: 100%;
+}

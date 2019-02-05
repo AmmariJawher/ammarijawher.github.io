@@ -2,18 +2,18 @@
 @import "mixins";
 @import "variables";
 @import "reset";
-
 // Header Section Styling
 header {
-  background-color: color(primary);
-  color: color(secondary);
+  background-color: #fff;
+  color: #000;
   height: 50px;
+  box-shadow: 0 -5px 10px 0 #000;
 
   .container {
     padding: 10px 0 0;
   }
 
-  .mobile-menu {
+  .mobile-header {
     height: auto;
 
     h1 {
@@ -24,7 +24,7 @@ header {
     a {
       float: right;
       font-size: 25px;
-      color: color(secondary);
+      color: #242424;
     }
   }
 
@@ -46,12 +46,13 @@ header {
 .hero {
   padding-bottom: 40px;
   height: 500px;
-  @include background("../img/ocean.jpeg", center, primary, cover);
+  @include background("../img/ocean.jpeg", center, #fff, cover);
 
-  h1:not(.logo) {
-    margin-top: 20vh;
+  h1 {
+    margin-top: 100px;
     padding-bottom: 20px;
     font-size: 4rem;
+    font-weight: 500;
   }
 
   p {
@@ -72,11 +73,12 @@ header {
     i {
       font-size: 50px;
       padding-bottom: 10px;
-      color: color(btn-primary);
+      color: color(primary);
     }
 
     h3 {
-      color: color(secondary);
+      color: #000;
+      font-weight: 500;
     }
 
     p {
@@ -89,7 +91,7 @@ header {
   padding: 40px 0;
 
   h1 {
-    color: color(primary);
+    color: #fff;
   }
 
   p {
@@ -105,38 +107,57 @@ header {
   }
 
   .skills-info {
-    background-color: black;
+    background-color: #000;
     margin: auto;
     text-align: center;
-    // TODO: rewrite the skill bar CSS code to work using SASS mixin
-    .skill-bar {
-      width: 100%;
-      background-color: color(secondary-lighter);
-      height: 3px;
-
-      div {
-        width: 70%;
-        background-color: color(primary);
-        height: 100%;
-      }
-    }
 
     .skill-title {
       text-align: left;
-      color: color(primary);
+      color: #fff;
       font-weight: 400;
       margin: 40px 0 5px;
     }
   }
-}
+
+    .progress-bar {
+      @include progress-bar(#fff);
+
+      .bar1 {
+        @include progress(80%, color(primary));
+      }
+      .bar2 {
+        @include progress(40%, color(primary));
+      }
+      .bar3 {
+        @include progress(30%, color(primary));
+      }
+      .bar4 {
+        @include progress(50%, color(primary));
+      }
+    }
+
+  }
 
 #projects {
   .gridbox > div {
+    display: block;
     height: 227px;
-    @include background("../img/gridbox-element-background-testing.png", center, primary, cover);
+    @include background("../img/gridbox-element-background-testing.png", center, white, cover);
     position: relative;
     margin-bottom: 20px;
-    font-family: font(secondary);
+    cursor: pointer;
+
+    .link-element {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      /* fixes overlap error in IE7/8,
+         make sure you have an empty gif */
+      background-image: url("empty.gif");
+    }
 
     .discription {
       height: 100px;
@@ -164,10 +185,10 @@ header {
 }
 
 .social-media {
-  background: color(secondary);
+  background: #000;
 
   .title {
-    color: color(primary);
+    color: #fff;
   }
 
   ul {
@@ -178,7 +199,7 @@ header {
     display: inline-block;
     font-size: 40px;
     margin: 0 20px;
-    color: color(primary);
+    color: #fff;
     transition: 0.3s;
   }
 
@@ -189,7 +210,7 @@ header {
 }
 
 footer {
-  background-color: color(secondary);
+  background-color: #000;
   padding: 10px 0;
   color: color(secondary-lighter);
   text-align: center;
@@ -197,14 +218,13 @@ footer {
 // Desktop Setting
 @media only screen and (min-width: 768px) {
   header {
-    background: color(primary);
+    background: #fff;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1;
-
-    // TODO: Fix the Header
-    .mobile-menu {
+    // TODO: Make the mobile version
+    .mobile-header {
       display: none;
     }
 
@@ -230,7 +250,7 @@ footer {
         margin: 0 30px;
 
         a {
-          color: color(secondary);
+          color: #000;
           transition: 0.3s;
         }
 
@@ -244,7 +264,6 @@ footer {
 
   .hero {
     min-height: 700px;
-    @include background("../img/ocean.jpeg", center, primary, cover);
 
     h1 {
       margin-top: 20vh;
@@ -282,7 +301,7 @@ footer {
     }
 
     .side-img {
-      @include background("../img/background-side-img.jpg", center, primary, cover);
+      @include background("../img/sider-background.jpg", center, primary, cover);
       width: 50%;
       display: block;
     }
@@ -295,7 +314,7 @@ footer {
 
       .skill-title {
         text-align: left;
-        color: color(primary);
+        color: #fff;
         font-weight: 400;
         margin: 60px 0 5px;
       }

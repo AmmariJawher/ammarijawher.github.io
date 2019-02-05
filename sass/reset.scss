@@ -9,6 +9,8 @@ html {
 
 body {
   font-family: font(primary), sans-serif;
+  color: #000;
+   line-height: 1.5;
 
   .container {
     width: 90%;
@@ -18,7 +20,7 @@ body {
 
   a {
     text-decoration: none;
-    color: color(primary);
+    color: #fff;
   }
 }
 // Generic Styling
@@ -26,7 +28,7 @@ body {
 .paragraphy {
   padding-bottom: 40px;
   font-size: 16px;
-  color: color(secondary-lighter);
+  color: #333;
   text-align: center;
   line-height: 170%;
 }
@@ -35,7 +37,8 @@ body {
   padding: 40px 0 15px;
   font-size: 35px;
   text-align: center;
-  color: color(secondary);
+  color: #000;
+  font-weight: 500;
 }
 // Button Styling
 
@@ -49,36 +52,29 @@ body {
   border-radius: 100px;
   padding: 15px 30px;
   margin: 0 20px 10px 0;
+  transition: 0.3s;
 }
 
 .btn-primary {
   @extend %btn-shared;
-  background: color(btn-primary);
-  color: color(primary);
+  background: color(primary);
+  color: #fff !important;
 }
+
 .btn-primary:hover {
-  background: color(btn-primary-lighter);
+  background: color(primary-lighter);
 }
 
 .btn-primary-min {
-  @extend %btn-shared;
-  background: color(btn-primary);
-  color: color(primary) !important;
   padding: 10px 20px;
-  margin: 0;
-}
-
-.btn-primary-min:hover {
-  background: color(btn-primary-lighter);
 }
 
 .btn-simple {
   @extend %btn-shared;
-  background: color(primary);
-  color: color(secondary);
+  background: #fff;
+  color: #000;
 }
 
 .btn-simple:hover {
-  background: color(primary);
-  color: color(secondary);
+  background: #eee;
 }

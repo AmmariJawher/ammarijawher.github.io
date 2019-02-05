@@ -1,19 +1,24 @@
-$colors: (
-  primary: #FFF,
-  secondary: #000,
-  secondary-lighter: lighten(#000, 50%),
-  background-darker: #f4f5f6,
-  btn-primary: #00e833,
-  btn-primary-lighter: lighten(#00e833, 10%),
+// Google Font and Font Awesome
+@import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500';
+@import 'https://use.fontawesome.com/releases/v5.7.1/css/all.css';
 
+$colors: (
+  primary: #00aede,
+  primary-lighter: darken(#00aede, 5%),
+  secondary: #0d2c40,
+  secondary-lighter: #143358,
+  white: #fff,
+  black: #000,
 );
+
 $fonts: (
-  primary: "Fira Sans",
-  secondary: "Rubik"
+  primary: "Roboto",
 );
-@function font($font-name) {
-  @return map-get($fonts, $font-name);
-}
+
 @function color($color-name) {
   @return map-get($colors, $color-name);
+}
+
+@function font($font-name) {
+  @return map-get($fonts, $font-name);
 }

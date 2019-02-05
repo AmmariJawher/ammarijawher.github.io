@@ -9,9 +9,17 @@
   <!-- CSS links -->
   <link rel="stylesheet" href="css/main.css">
 
-  <!-- Google and Awesome Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400|Rubik:400" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <!-- CSS libraries -->
+
+  <!-- JavaSript -->
+  <script type="text/javascript" src="js/main.js"></script>
+
+  <!-- JavaSript libraries: -->
+  <!-- ScrollMagic -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.min.js"></script>
 
   <title>Jawher Ammari</title>
 </head>
@@ -20,7 +28,7 @@
   <section class="hero">
     <header>
       <div class="container">
-        <div class="mobile-menu">
+        <div class="mobile-header">
           <a class="menu-icon" href="#"><i class="fas fa-bars"></i></a>
         </div>
         <nav class="navbar">
@@ -28,7 +36,7 @@
           <ul class="navmenu">
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
-            <li><a href="" class="btn-primary-min">Contact</a></li>
+            <li><a href="" class="btn-primary btn-primary-min">Contact</a></li>
           </ul>
         </nav>
       </div>
@@ -37,30 +45,31 @@
       <h1>Hi there!</h1>
       <p>And welcome to my website, my name is Jawher Ammari. I am a self thought front-end web developer. I build themes and work on projects form time to time.</p>
       <button class="btn-primary" type="button" name="button">view protfolio</button>
-      <button class="btn-simple" type="button" name="button">cheack my cv</button>
+      <button class="btn-simple" type="button" name="button">check my cv</button>
     </div>
   </section>
 
   <section class="web-tools" id="about">
     <div class="container">
       <h1 class="title">Familiar with modern tools</h1>
-      <p class="paragraphy">I use the latest development tools with an intuitive workflow designed to get the up runnning faster.</p>
+      <p class="paragraphy">I use the latest development tools with an intuitive workflow designed to get the project done faster and smoother.</p>
 
       <div class="flexbox">
         <div>
-          <i class="fab fa-suse"></i>
-          <h3>Front-end Developer</h3>
-          <p class="paragraphy">From image sliders to custom content elements and contact forms, Incubator theme is guaranteed to display properly on all major devices.</p>
+          <i class="fas fa-code-branch"></i>
+          <h3>Version Control</h3>
+          <p class="paragraphy">
+            Keeps track of every modification to the code in a special kind of database. If a mistake is made, developers can turn back to help fix the mistake while minimizing disruption to all team members.</p>
         </div>
         <div>
-          <i class="fab fa-suse"></i>
-          <h3>Front-end Developer</h3>
-          <p class="paragraphy">From image sliders to custom content elements and contact forms, Incubator theme is guaranteed to display properly on all major devices.</p>
+          <i class="fab fa-linux"></i>
+          <h3>Bash</h3>
+          <p class="paragraphy">The terminal is one of the most important productivity tools. Mastering it can have a very positive effect on workflow, as many everyday tasks get reduced to writing a simple command.</p>
         </div>
         <div>
-          <i class="fab fa-suse"></i>
-          <h3>Front-end Developer</h3>
-          <p class="paragraphy">From image sliders to custom content elements and contact forms, Incubator theme is guaranteed to display properly on all major devices.</p>
+          <i class="fab fa-sass"></i>
+          <h3>Sass</h3>
+          <p class="paragraphy">Sass is an extension of CSS that adds power and elegance to the basic language. It allows you to use variables, nested rules, mixins, inline imports, and more, all with a fully CSS-compatible syntax.</p>
         </div>
       </div>
     </div>
@@ -78,13 +87,13 @@
         <p class="paragraphy">I design, build and support websites and apps for clients worldwide.</p>
 
         <h4 class="skill-title">HTML and CSS</h4>
-        <div class="skill-bar"><div></div></div>
+        <div class="progress-bar"><div class="bar1"></div></div>
         <h4 class="skill-title">JavaSript</h4>
-        <div class="skill-bar"><div></div></div>
-        <h4 class="skill-title">SASS</h4>
-        <div class="skill-bar"><div></div></div>
+        <div class="progress-bar"><div class="bar2"></div></div>
+        <h4 class="skill-title">Django</h4>
+        <div class="progress-bar bar3"><div class="bar3"></div></div>
         <h4 class="skill-title">Python</h4>
-        <div class="skill-bar"><div></div></div>
+        <div class="progress-bar bar4"><div class="bar4"></div></div>
       </div>
     </div>
   </section>
@@ -95,20 +104,23 @@
       <p class="paragraphy">i believe that building a from the start to finish is a good way to mesure someone motivation and code quality.</p>
       <div class="gridbox">
         <div class="element1">
+          <a href="#"><span class="link-element"></span></a>
           <div class="discription">
-            <h2 class="project-name">project name</h2>
+            <h2 class="project-name">E-Commerce Website</h2>
             <p class="description">projct discription</p>
           </div>
         </div>
         <div class="element2">
+          <a href="#"><span class="link-element"></span></a>
           <div class="discription">
-            <h2 class="project-name">projct name 2</h2>
-            <p class="description">projct discription 2</p>
+            <h2 class="project-name">Digital Marketing Agency Website</h2>
+            <p class="description">Project description</p>
           </div>
         </div>
         <div class="element2">
+          <a href="#"><span class="link-element"></span></a>
           <div class="discription">
-            <h2 class="project-name">project name 3</h2>
+            <h2 class="project-name">Softbank </h2>
             <p class="description">projct discription 3</p>
           </div>
         </div>
@@ -117,7 +129,7 @@
   </section>
   <section class="social-media">
     <div class="container">
-      <h1 class="title">Follow me on Socila Media</h1>
+      <h1 class="title">Let's Get Social</h1>
       <ul>
         <li><a class="fab fa-linkedin-in" href="#"></a></li>
         <li><a class="fab fa-twitter" href="#"></a></li>
