@@ -1,0 +1,70 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1.5;
+}
+
+body a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.paragraphy {
+  padding-bottom: 40px;
+  font-size: 16px;
+  color: #333;
+  text-align: center;
+  line-height: 170%;
+}
+
+.title {
+  padding: 40px 0 15px;
+  font-size: 35px;
+  text-align: center;
+  color: #000;
+  font-weight: 500;
+}
+
+.btn-primary, .btn-simple {
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  text-transform: capitalize;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 100px;
+  padding: 15px 30px;
+  margin: 0 20px 10px 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.btn-primary {
+  background: color(primary);
+  color: #fff !important;
+}
+
+.btn-primary:hover {
+  background: color(primary-lighter);
+}
+
+.btn-primary-min {
+  padding: 10px 20px;
+}
+
+.btn-simple {
+  background: #fff;
+  color: #000;
+}
+
+.btn-simple:hover {
+  background: #eee;
+}
+/*# sourceMappingURL=reset.css.map */

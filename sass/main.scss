@@ -3,63 +3,6 @@
 @import "variables";
 @import "reset";
 // Header Section Styling
-header {
-  background-color: #fff;
-  color: #000;
-  height: 50px;
-  box-shadow: 0 -5px 10px 0 #000;
-
-  .container {
-    padding: 10px 0 0;
-  }
-
-  .mobile-header {
-    height: auto;
-
-    h1 {
-      font-size: 22px;
-      float: left;
-    }
-
-    a {
-      float: right;
-      font-size: 25px;
-      color: #242424;
-    }
-  }
-
-  .navbar {
-    clear: both;
-    text-align: center;
-    display: none;
-  }
-
-  ul {
-    list-style: none;
-  }
-
-  li {
-    padding: 10px 0;
-  }
-}
-
-.hero {
-  padding-bottom: 40px;
-  height: 500px;
-  @include background("../img/ocean.jpeg", center, #fff, cover);
-
-  h1 {
-    margin-top: 100px;
-    padding-bottom: 20px;
-    font-size: 4rem;
-    font-weight: 500;
-  }
-
-  p {
-    padding-bottom: 40px;
-    font-size: 20px;
-  }
-}
 
 .web-tools {
   .flexbox {
@@ -78,7 +21,7 @@ header {
 
     h3 {
       color: #000;
-      font-weight: 500;
+      font-weight: 500;  
     }
 
     p {
@@ -95,6 +38,7 @@ header {
   }
 
   p {
+    color: #fff;
     padding-bottom: 0;
   }
 
@@ -103,7 +47,12 @@ header {
   }
 
   .side-img {
-    display: none;
+    background-image: url("../img/ocean.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+    display: block;
   }
 
   .skills-info {
@@ -123,13 +72,13 @@ header {
       @include progress-bar(#fff);
 
       .bar1 {
-        @include progress(80%, color(primary));
+        @include progress(90%, color(primary));
       }
       .bar2 {
-        @include progress(40%, color(primary));
+        @include progress(80%, color(primary));
       }
       .bar3 {
-        @include progress(30%, color(primary));
+        @include progress(60%, color(primary));
       }
       .bar4 {
         @include progress(50%, color(primary));
@@ -142,7 +91,6 @@ header {
   .gridbox > div {
     display: block;
     height: 227px;
-    @include background("../img/gridbox-element-background-testing.png", center, white, cover);
     position: relative;
     margin-bottom: 20px;
     cursor: pointer;
@@ -167,6 +115,7 @@ header {
       position: absolute;
       bottom: 0;
       padding-top: 30px;
+      transition: 0.3s;
 
       h2 {
         font-weight: 400;
@@ -181,6 +130,19 @@ header {
         margin-left: 20px;
       }
     }
+  }
+  .gridbox > div:nth-child(1) {
+    @include background("../img/project-1.png", center, white, cover);
+  }
+  .gridbox > div:nth-child(2) {
+    @include background("../img/project-2.png", center, white, cover);
+  }
+  .gridbox > div:nth-child(3) {
+    @include background("../img/project-3.png", center, white, cover);
+  }
+  .gridbox > div:hover {
+    opacity: 0.6;
+    transition: 0.3s;
   }
 }
 
@@ -217,81 +179,7 @@ footer {
 }
 // Desktop Setting
 @media only screen and (min-width: 768px) {
-  header {
-    background: #fff;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1;
-    // TODO: Make the mobile version
-    .mobile-header {
-      display: none;
-    }
 
-    .logo {
-      display: inline;
-      float: left;
-      font-size: 18px;
-      font-weight: 400;
-      padding-top: 5px;
-    }
-
-    .navbar {
-      display: inline;
-
-      .navmenu {
-        padding-top: 5px;
-        align-self: right;
-        float: right;
-      }
-
-      li {
-        display: inline;
-        margin: 0 30px;
-
-        a {
-          color: #000;
-          transition: 0.3s;
-        }
-
-        a:hover {
-          color: color(secondary-lighter);
-          transition: 0.3s;
-        }
-      }
-    }
-  }
-
-  .hero {
-    min-height: 700px;
-
-    h1 {
-      margin-top: 20vh;
-      font-size: 100px;
-    }
-
-    p {
-      width: 60%;
-    }
-  }
-
-  .web-tools {
-    .flexbox {
-      display: flex;
-      text-align: left;
-      flex-flow: row;
-      justify-content: space-between;
-
-      div {
-        flex: 1;
-        padding: 10px;
-      }
-
-      p {
-        text-align: left;
-      }
-    }
-  }
 
   .skills {
     div {
